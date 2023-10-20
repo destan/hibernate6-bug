@@ -1,0 +1,18 @@
+datasources:
+  default:
+    dialect: POSTGRES
+    url: jdbc:postgresql:delete_this
+    username: demouser
+    password: hede
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
+        show_sql: false # DON'T USE THIS use the logger config at the end of this file
+        format_sql: true
+        generate_statistics: false
+        session.events.log.LOG_QUERIES_SLOWER_THAN_MS: "1000"
+        query.fail_on_pagination_over_collection_fetch: true
